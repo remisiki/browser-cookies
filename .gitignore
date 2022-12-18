@@ -1,3 +1,4 @@
 /.bsp/
 target/
 cookies.json
+publish.sbt
