@@ -2,3 +2,6 @@
 target/
 cookies.json
 publish.sbt
+doc
+doc.zip
+makedoc.sh

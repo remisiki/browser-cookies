@@ -1,5 +1,5 @@
 ThisBuild / scalaVersion     := "2.13.8"
-ThisBuild / version          := "0.1.0"
+ThisBuild / version          := "0.1.1"
 ThisBuild / organization     := "com.remisiki"
 ThisBuild / organizationName := "remisiki"
 ThisBuild / scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-Xlint:_")
@@ -7,7 +7,7 @@ ThisBuild / scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature", "-Xl
 lazy val root = (project in file("."))
 	.settings(
 		name := "browser-cookies",
-		Compile / javaSource := baseDirectory.value / "src"
+		// Compile / javaSource := baseDirectory.value / "src"
 	)
 
 libraryDependencies ++= Seq(

@@ -12,7 +12,8 @@ import org.freedesktop.secret.simple.SimpleCollection;
 public class Crypto {
 
 	public static char[] getSecret() throws Exception {
-		try (SimpleCollection collection = new SimpleCollection()) {
+		SimpleCollection collection = new SimpleCollection();
+		try {
 			Map<String, String> m = new HashMap<String, String>();
 			m.put("application", "chrome");
 			m.put("xdg:schema", "chrome_libsecret_os_crypt_password_v2");
@@ -25,6 +26,8 @@ public class Crypto {
 			}
 		} catch (Exception err) {
 			throw err;
+		} finally {
+			collection.disconnect();
 		}
 	}
 
